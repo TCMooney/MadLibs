@@ -4,6 +4,7 @@
     display: grid;
     justify-items: center;
     grid-template-rows: [header-s] 218px [header-e card-s] minmax(736px, 994px) [card-e];
+    margin: 0px;
 }
 
 .header {
@@ -64,10 +65,14 @@
 
     &__inputs {
         display: grid;
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 27px);
         grid-template-columns: repeat(4, 1fr);
         justify-items: center;
         align-items: center;
+        grid-row-gap: 120px;
+        margin-top: 66px;
+        margin-left: 83px;
+        margin-right: 83px;
     }
 }
 
@@ -76,20 +81,30 @@
     grid-template-columns: [number-s] 26px [number-e input-s] 1fr [input-e];
     font-family: 'Montserrat';
     text-align: center;
+    grid-column-gap: 8px;
+    height: 47px;
     &__title {
         grid-column: input-s/input-e;
-        border-top: 1px solid #B3B3b3;
         color:  #B3B3b3;
         font-size: 12px;
         font-weight: 300;
+        border-top: 1px solid #B3B3B3;
     }
 
     input {
         grid-column: input-s/input-e;
         border: none;
         text-align: center;
+        padding: 4px 0;
+        border-bottom: 1px;
+        transition: all .3s ease;
         // width: 190px;
         // height: 40px;
+
+        &:focus {
+            outline: none;
+            border-bottom: 1px solid #B3B3B3;
+        }
     }
 
     &__number {
@@ -100,6 +115,8 @@
         line-height: 24px;
         text-align: center;
         padding-top: 1px;
+        height: 26px;
+        width: 26px;
         border-radius: 50%;
     }
 }
