@@ -100,7 +100,6 @@
 
     button {
         justify-self: center;
-        transform: translateY(50%);
     }
 
     button:focus {
@@ -109,12 +108,14 @@
 
     &__generate {
         background-color: #00CB79;
+        transform: translateY(-220px);
         @include button;
     }
 
     &__clear {
         background-color: #45B0E5;
         @include button;
+        transform: translateY(50%);
     }
 
     &__content {
